@@ -28,8 +28,8 @@ namespace TravelAgentWeb
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            // services.AddDbContext<TravelAgentDbContext>(opt => opt.UseMySql(Configuration.GetConnectionString("TravelAgentConnection"), MySqlServerVersion.AutoDetect(Configuration.GetConnectionString("TravelAgentConnection"))));
-            services.AddDbContext<TravelAgentDbContext>(opt => opt.UseSqlite(Configuration.GetConnectionString("TravelAgentConnectionLite")));
+            services.AddDbContext<TravelAgentDbContext>(opt => opt.UseMySql(Configuration.GetConnectionString("TravelAgentConnection"), MySqlServerVersion.AutoDetect(Configuration.GetConnectionString("TravelAgentConnection"))));
+            // services.AddDbContext<TravelAgentDbContext>(opt => opt.UseSqlite(Configuration.GetConnectionString("TravelAgentConnectionLite")));
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

@@ -8,28 +8,29 @@ using TravelAgentWeb.Data;
 namespace TravelAgentWeb.Migrations
 {
     [DbContext(typeof(TravelAgentDbContext))]
-    [Migration("20210111011505_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20210111015556_InitialMgration")]
+    partial class InitialMgration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
+                .HasAnnotation("Relational:MaxIdentifierLength", 64)
                 .HasAnnotation("ProductVersion", "5.0.1");
 
             modelBuilder.Entity("TravelAgentWeb.Models.WebhookSecret", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
 
                     b.Property<string>("Publisher")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<string>("Secret")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.HasKey("Id");
 
