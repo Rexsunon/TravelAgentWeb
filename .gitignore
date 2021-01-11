@@ -1,3 +1,6 @@
 .vscode/
 bin/
 obj/
+TravelAgentWebDb.db
+TravelAgentWebDb.db-shm
+TravelAgentWebDb.db-wal
