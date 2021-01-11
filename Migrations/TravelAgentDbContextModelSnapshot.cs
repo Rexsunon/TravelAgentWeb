@@ -13,22 +13,21 @@ namespace TravelAgentWeb.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("Relational:MaxIdentifierLength", 64)
                 .HasAnnotation("ProductVersion", "5.0.1");
 
             modelBuilder.Entity("TravelAgentWeb.Models.WebhookSecret", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Publisher")
                         .IsRequired()
-                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Secret")
                         .IsRequired()
-                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+                        .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 

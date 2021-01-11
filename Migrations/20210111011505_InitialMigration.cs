@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace TravelAgentWeb.Migrations
 {
@@ -11,10 +10,10 @@ namespace TravelAgentWeb.Migrations
                 name: "SubscriptionSecrets",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    Secret = table.Column<string>(type: "longtext CHARACTER SET utf8mb4", nullable: false),
-                    Publisher = table.Column<string>(type: "longtext CHARACTER SET utf8mb4", nullable: false)
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Secret = table.Column<string>(type: "TEXT", nullable: false),
+                    Publisher = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
